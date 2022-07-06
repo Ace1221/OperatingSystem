@@ -1,0 +1,40 @@
+process2Start
+Pid:2
+State:READY
+programCounter:5
+lowerBound:0
+upperBound:19
+Instruction1:semWait userInput
+Instruction2:input a
+Instruction3:assign a
+Instruction4:input b
+Instruction5:assign b
+Instruction6:semSignal userInput
+Instruction7:semWait file
+Instruction8:writeFile a b
+Instruction9:semSignal file
+VariableSpace:null
+a:aa
+b:b
+c:Empty
+process2End
+process1Start
+Pid:1
+State:FINISHED
+programCounter:8
+lowerBound:0
+upperBound:19
+Instruction1:semWait userInput
+Instruction2:input var1
+Instruction3:assign var1
+Instruction4:input var2
+Instruction5:assign var2
+Instruction6:semSignal userInput
+Instruction7:semWait userOutput
+Instruction8:printFromTo var1 var2
+Instruction9:semSignal userOutput
+VariableSpace:null
+var1:6
+var2:9
+c:Empty
+process1End
